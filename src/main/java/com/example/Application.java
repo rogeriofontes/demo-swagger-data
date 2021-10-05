@@ -1,18 +1,20 @@
 package com.example;
 
-import com.example.controller.PersonController;
 import com.example.model.service.PersonService;
 import io.micronaut.context.ApplicationContext;
 import io.micronaut.runtime.Micronaut;
-import io.swagger.v3.oas.annotations.*;
-import io.swagger.v3.oas.annotations.info.*;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.info.License;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @OpenAPIDefinition(
     info = @Info(
             title = "demo-swagger-data",
-            version = "0.0"
+            version = "0.0",
+            description = "Api de Teste",
+            license = @License(name = "MIT")
     )
 )
 public class Application {
