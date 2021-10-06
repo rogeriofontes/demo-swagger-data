@@ -27,7 +27,15 @@ import java.util.stream.Collectors;
 @Validated
 //@Controller("/persons")
 @Controller("${person.controller.path:/persons}")
+//@Operation(summary = "Creates a new bar object adding a decorated id and the current time",description = "Showcase of the creation of a dto")
 public class PersonController {
+
+    /*
+
+@ApiResponse(responseCode = "201", description = "Bar object correctly created",content = @Content(mediaType = "application/json",schema = @Schema(type="BarDto")))
+@ApiResponse(responseCode = "400", description = "Invalid id Supplied")
+@ApiResponse(responseCode = "500", description = "Remote error, server is going nuts")    @Tag(name = "create")
+     */
 
     private static final Logger LOG = LoggerFactory.getLogger(PersonController.class);
 

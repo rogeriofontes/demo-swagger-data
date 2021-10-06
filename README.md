@@ -20,3 +20,11 @@
 
 - [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
 
+/beans— Informações sobre os beans já carregados
+/info— Informações estáticas da aplicação providas ao implementar um bean para InfoSource
+/health — Disponibilidade da aplicação
+/metrics — Metricas (disponibilizado pelo Micrometer)
+/refresh — Recarrega Beans ( @Refreshable )
+/routes — Informações de rotas disponíveis
+/loggers — Informações sobre log.
+http://localhost:8100/swagger/demo-swagger-data-0.0.yml

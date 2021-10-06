@@ -23,6 +23,13 @@ micronaut:
   metrics:
     enabled: true
 
+endpoints:
+  all:
+    enabled: true
+    sensitive: false
+  stop:
+    enabled: false
+
 person:
   controller:
     path: "/person-from-config"
