@@ -23,8 +23,8 @@ public class Application {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = Micronaut.run(Application.class, args);
-        PersonService service = context.getBean(PersonService.class);
-        LOG.info(service.sayHi());
+        ApplicationContext cxt = Micronaut.run(Application.class, args);
+        PersonService bean = cxt.getBean(PersonService.class);
+        LOG.info(bean.sayHi());
     }
 }

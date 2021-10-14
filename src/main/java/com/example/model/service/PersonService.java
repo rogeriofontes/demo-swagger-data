@@ -19,7 +19,7 @@ public class PersonService {
 
     @EventListener
     public void onStartup(StartupEvent startupEvent) {
-        LOG.debug("Startup: {}", PersonService.class.getSimpleName());
+        LOG.debug("Startup: {} " + startupEvent.toString(), PersonService.class.getSimpleName());
     }
 
     public String sayHi() {

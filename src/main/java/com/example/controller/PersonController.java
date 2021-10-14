@@ -13,6 +13,7 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.validation.Validated;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.inject.Inject;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
@@ -26,7 +27,7 @@ import java.util.stream.Collectors;
 
 @Validated
 //@Controller("/persons")
-@Controller("${person.controller.path:/persons}")
+@Controller("${person.controller.path:/persons1}")
 //@Operation(summary = "Creates a new bar object adding a decorated id and the current time",description = "Showcase of the creation of a dto")
 public class PersonController {
 
@@ -52,6 +53,8 @@ public class PersonController {
     }
 
     @Get("/hi")
+    @Operation(summary = "Get users",
+            description = "Get list of users")
     public HttpResponse<?> getHi() {
         LOG.info("Sau HI");
         return HttpResponse.status(HttpStatus.OK).body(this.personService.sayHi());

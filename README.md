@@ -27,4 +27,10 @@
 /refresh — Recarrega Beans ( @Refreshable )
 /routes — Informações de rotas disponíveis
 /loggers — Informações sobre log.
+
+
+#Chamadas OpenAPI
+http://localhost:8100/redoc
+http://localhost:8100/rapidoc#get-/persons1
+http://localhost:8100/swagger-ui#/
 http://localhost:8100/swagger/demo-swagger-data-0.0.yml
