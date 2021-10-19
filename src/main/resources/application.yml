@@ -22,6 +22,8 @@ micronaut:
         mapping: /swagger-ui/**
   metrics:
     enabled: true
+  security:
+    enabled: true
 
 endpoints:
   all:
@@ -49,7 +51,7 @@ jpa.default.properties.hibernate.hbm2ddl.auto: update
 jpa:
   default:
     entity-scan:
-      packages: 'com.example.model.domain'
+      packages: 'com.example.*'
     properties:
       hibernate:
         hbm2ddl:

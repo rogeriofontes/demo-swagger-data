@@ -12,6 +12,8 @@ import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
+import io.micronaut.security.annotation.Secured;
+import io.micronaut.security.rules.SecurityRule;
 import io.micronaut.validation.Validated;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.inject.Inject;
@@ -29,6 +31,7 @@ import java.util.stream.Collectors;
 //@Controller("/persons")
 @Controller("${person.controller.path:/persons1}")
 //@Operation(summary = "Creates a new bar object adding a decorated id and the current time",description = "Showcase of the creation of a dto")
+@Secured(SecurityRule.IS_AUTHENTICATED)
 public class PersonController {
 
     /*

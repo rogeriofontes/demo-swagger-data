@@ -17,7 +17,7 @@
         <packaging>jar</packaging>
         <jdk.version>11</jdk.version>
         <release.version>11</release.version>
-        <micronaut.version>3.0.3</micronaut.version>
+        <micronaut.version>3.1.1</micronaut.version>
         <exec.mainClass>com.example.Application</exec.mainClass>
         <micronaut.data.version>3.0.0</micronaut.data.version>
         <micronaut.runtime>netty</micronaut.runtime>
@@ -72,6 +72,11 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>micronaut-inject-java</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
             <groupId>io.micronaut.data</groupId>
             <artifactId>micronaut-data-hibernate-jpa</artifactId>
             <scope>compile</scope>
@@ -110,6 +115,27 @@
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-management</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.micronaut.security</groupId>
+            <artifactId>micronaut-security</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut.security</groupId>
+            <artifactId>micronaut-security-jwt</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut.reactor</groupId>
+            <artifactId>micronaut-reactor</artifactId>
+            <!--version>2.0.0</version-->
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut.beanvalidation</groupId>
+            <artifactId>micronaut-hibernate-validator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -156,6 +182,11 @@
                             <groupId>io.micronaut.openapi</groupId>
                             <artifactId>micronaut-openapi</artifactId>
                             <version>${micronaut.openapi.version}</version>
+                        </path>
+                        <path>
+                            <groupId>io.micronaut.security</groupId>
+                            <artifactId>micronaut-security-annotations</artifactId>
+                            <version>${micronaut.security.version}</version>
                         </path>
                     </annotationProcessorPaths>
                     <fork>true</fork>

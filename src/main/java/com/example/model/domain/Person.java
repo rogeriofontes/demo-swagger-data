@@ -13,7 +13,7 @@ import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
 
 @Entity
-@Introspected
+//@Introspected
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
